@@ -1,5 +1,3 @@
 FROM nginx
 LABEL maintainer="Miguel Fernández"
-COPY site.conf /etc/nginx/conf.d
-
-USER www-data
+ADD ./site.conf /etc/nginx/conf.d
