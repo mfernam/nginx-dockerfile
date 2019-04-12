@@ -1,0 +1,27 @@
+<?php
+unset($CFG);  // Ignore this line
+global $CFG;  // This is necessary here for PHPUnit execution
+$CFG = new stdClass();
+
+$CFG->dbtype    = 'mysqli';      // 'pgsql', 'mariadb', 'mysqli', 'sqlsrv' or 'oci'
+$CFG->dblibrary = 'native';     // 'native' only at the moment
+$CFG->dbhost    = '10.1.56.199';  // eg 'localhost' or 'db.isp.com' or IP
+$CFG->dbname    = 'mdl_campus_20180912';     // database name, eg moodle
+$CFG->dbuser    = 'moodle_campus';   // your database username
+$CFG->dbpass    = 'EGhahga2iudeimoh';   // your database password
+$CFG->prefix    = 'mdl_';
+$CFG->dboptions = array (
+  'dbpersist' => 0,
+  'dbport' => '3306',
+  'dbsocket' => '',
+  'dbcollation' => 'utf8mb4_0900_ai_ci',
+);
+
+$CFG->wwwroot   = 'http://172.16.0.3';
+
+$CFG->dataroot  = '/var/www/moodledata';
+$CFG->admin     = 'admin';
+
+$CFG->directorypermissions = 0777;
+
+require_once(__DIR__ . '/lib/setup.php');
